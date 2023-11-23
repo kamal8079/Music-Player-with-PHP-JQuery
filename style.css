@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+body{
+    background: url('background/bg3.jpg') no-repeat center center/cover;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Fugaz One', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 70px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0px 35px;
+    font-size: 1.2rem;
+}
+
+.brand img{
+    width: 99px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding-left: 0%;
+}
+
+.container{
+    min-height: 56vh;
+    background: url('background/bg.jpg') no-repeat center center/cover;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 60%;
+    border-radius: 22px;
+    padding: 34px;
+}
+
+.bottom{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    background: black;
+    opacity: 0.8;
+    color: white;
+    bottom: 0;
+    flex-direction: column;
+}
+
+
+.songItemConatainer{
+    width: 85%;
+    margin-top: 23px;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+main {
+    display: block;
+    min-height: 100%;
+    overflow: auto;
+}
+
+#project-title {
+    padding: 2.5em 1em !important;
+    text-shadow: 3px 3px 7px #000;
+}
+
+
+/* Loader */
+
+div#pre-loader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(0.5);
+    z-index: 9999999;
+}
+
+#loader-container {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+#loader-container div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: pre-loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+#loader-container div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+#loader-container div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+#loader-container div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes pre-loader {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
+#dImage {
+    width: 100%;
+    max-height: 15vh;
+    object-fit: scale-down;
+    object-position: center center;
+    ;
+}
+
+img.mini-display-img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    object-position: center center;
+    padding: 0.1em;
+}
+
+#text-floated {
+    width: 22%;
+    top: 27%;
+    position: absolute;
+    left: 62%;
+    color: #fff;
+}
+
+#currentTime {
+    position: absolute;
+    left: 21%;
+    top: 20%;
+}
+
+#range-holder {
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+
+#range-holder input {
+    width: 600%;
+}
+
+#volume-bar {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+#all-btn {
+    position: absolute;
+    top: 50%;
+}
+#all-btn button {
+    margin-left: 20px;
+    padding: 5px;
+    height: 45px;
+    width: 50px;
+    border-radius: 25%;
+}
